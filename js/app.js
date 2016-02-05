@@ -1,4 +1,5 @@
-var offerApp = angular.module('offerApp', ['ui.router']);
+angular.module('dynamic.form.module',[]);
+var offerApp = angular.module('offerApp', ['ui.router','dynamic.form.module']);
 
 offerApp.config(function($stateProvider, $urlRouterProvider) {
 
@@ -27,5 +28,9 @@ offerApp.config(function($stateProvider, $urlRouterProvider) {
             url: '/teen',
             templateUrl: 'views/teenager.html'
         })
-
+        .state('applyCard', {
+              url: '/applyCard',
+              templateUrl: 'views/form.html',
+              controller: 'dynamicFormController as vm'
+        })
 });

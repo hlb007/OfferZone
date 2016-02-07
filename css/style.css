@@ -139,7 +139,15 @@ p.small {
 	opacity: 0.7;
 	transition: 0.5s;
 }
-
+.login-footer{
+	bottom: 0;
+  height: 20px;
+  position: fixed;
+  width: 100%;
+  color: whitesmoke;
+  text-align: center;
+	background: rgba(98, 26, 75, 0.51);
+}
 .selected {
 	color: #665851!important;
 	transition: 0.5s;

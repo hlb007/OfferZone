@@ -3,10 +3,11 @@
     'use strict'
     angular.module('dynamic.form.module')
             .controller('dynamicFormController',dynamicFormController);
-            dynamicFormController.$inject = ['dynamicFormService','$scope'];
-             function dynamicFormController(dynamicFormService, $scope){
+            dynamicFormController.$inject = ['dynamicFormService','$scope','viewPath'];
+             function dynamicFormController(dynamicFormService, $scope,viewPath){
               var vm = this;
               var segment = '';
+              vm.views = viewPath;
               vm.formElementsData = [];
               vm.modelElementsList = [];
               vm.updateModelValues = updateModelValues;

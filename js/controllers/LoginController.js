@@ -3,8 +3,8 @@
     'use strict'
     angular.module('offerApp')
             .controller('LoginController',LoginController);
-            LoginController.$inject = ['$scope', 'viewPath', 'LoginService', '$state','geolocation','$rootScope'];
-             function LoginController($scope, viewPath, LoginService, $state, geolocation, $rootScope){
+            LoginController.$inject = ['$scope', 'viewPath', 'LoginService', '$state','geolocation','$rootScope', '$window'];
+             function LoginController($scope, viewPath, LoginService, $state, geolocation, $rootScope, $window){
                 var vm = this;
                 vm.views = viewPath;
                 vm.errorClass = false;
@@ -24,11 +24,12 @@
                     vm.errorClass = true;
                   });
                 };
-                var geo = geolocation.getLocation();
-                geo.then(function(data){
+                geolocation.getLocation().then(function(data){
                   console.log('here'+data);
                   vm.showLocationMessage = false
                   vm.locationMessage = 'You have enabled the locaion tracking on this website. We will use this to customize your offers';
+                  if($state.current.name !== 'login')
+                    $window.location.reload();
                 },function(data){
                     console.log('there'+data);
                     vm.locationMessage = data;

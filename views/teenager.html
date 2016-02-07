@@ -1,6 +1,6 @@
 <header ng-include="young.views+'header.html'"></header>
     <div class="intro3-header">
-        <div class="">
+        <div class="container no-margin">
             <div class="fullscreen-bg">
                 <video loop muted autoplay poster="http://dev2.slicejack.com/fullscreen-video-demo/img/videoframe.jpg" class="fullscreen-bg__video">
                     <source src="http://dev2.slicejack.com/fullscreen-video-demo/video/big_buck_bunny.mp4" type="video/mp4">
@@ -23,18 +23,18 @@
         </div>
     </div>
 
-    <section class="bg-primary" id="about">
+    <!-- <section class="bg-primary" id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">We've got what you need!</h2>
-                    <!--<hr class="light">-->
+
                     <p class="text-faded"></p>
                     <a href="#" class="btn btn-default btn-xl">Get Started!</a>
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section id="services" style="background: #fff">
         <div class="container">
@@ -78,13 +78,11 @@
             </div>
         </div>
     </section>
-
-
     <section id="portfolio" style="padding: 20px; background: #fff">
         <div class="container-fluid">
             <div class="row no-gutter">
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
+                <div class="col-lg-4 col-sm-6" >
+                    <a href class="portfolio-box" ng-click="young.navigate()">
                         <img src="img/1.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
@@ -177,13 +175,3 @@
         </div>
     </section>
     </div>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                </div>
-            </div>
-        </div>
-    </footer>

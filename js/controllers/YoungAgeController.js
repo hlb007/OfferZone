@@ -7,5 +7,8 @@
              function YoungAgeController($scope, viewPath, $state){
                 var vm = this;
                 vm.views = viewPath;
+                vm.navigate = function(){
+                  $state.go('applyCard');
+                };
               }
   })();

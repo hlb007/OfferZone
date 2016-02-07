@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html ng-app="offerApp">
 <head>
-
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title></title>
+	<title>Proof of Cocept</title>
 
 	<!-- Custom Fonts -->
 	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -20,70 +19,34 @@
 	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
-
-	<script type="text/javascript" src="vendor/angular.min.js"></script>
-	<script type="text/javascript" src="vendor/angular-ui-router.js"></script>
-	<script type="text/javascript" src="vendor/jquery-1.12.0.min.js"></script>
-	<script type="text/javascript" src="vendor/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="vendor/theme.min.js"></script>
-
-	<script src="js/app.js"></script>
-	<script src="js/controllers/DynamicFormController.js"></script>
-	<script src="js/services/DynamicFormService.js"></script>
-	<!-- Bootstrap Core JavaScript -->
-	<script src="vendor/bootstrap.min.js"></script>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-
-		<!-- Custom Stylesheet -->
-	<!--<link href="css/style.css" rel="stylesheet">-->
 	<link rel="stylesheet" href="css/creative.css" type="text/css">
 	<link href="css/landing-page.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/style_video.css">
 	<link rel="stylesheet" href="css/animate.css">
 
-
 </head>
-
-<!-- apply our angular app to our site -->
 <body>
-
-
-<!-- Navigation -->
-	<nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-		<div class="topnav">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-						</button>
-						<a class="navbar-brand topnav" href="#">Westpac</a>
-				</div>
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav navbar-right">
-								<li>
-										<a href="#about">About</a>
-								</li>
-								<li>
-										<a href="#services">Services</a>
-								</li>
-								<li>
-										<a href="#contact">Contact</a>
-								</li>
-						</ul>
-				</div>
-				<!-- /.navbar-collapse -->
-		</div>
-		<!-- /.container -->
-</nav>
-
-<div>
-    <div ui-view></div>
-</div>
+    <div ui-view ng-class="{'body-background-login': login.loginpage, 'body-background': !login.loginpage}"></div>
+<!--  Core JavaScript libraries-->
+<script type="text/javascript" src="vendor/jquery-1.12.0.min.js"></script>
+<script type="text/javascript"src="vendor/bootstrap.min.js"></script>
+<script type="text/javascript" src="vendor/angular.min.js"></script>
+<script type="text/javascript" src="vendor/angular-ui-router.js"></script>
+<script type="text/javascript" src="vendor/jquery-ui.min.js"></script>
+<script type="text/javascript" src="vendor/theme.min.js"></script>
+<!-- custom javascript libraries -->
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/config/route.js"></script>
+<script type="text/javascript" src="js/jQuery.components.js"></script>
+<script type="text/javascript" src="js/controllers/DynamicFormController.js"></script>
+<script type="text/javascript" src="js/controllers/LoginController.js"></script>
+<script type="text/javascript" src="js/controllers/OldAgeController.js"></script>
+<script type="text/javascript" src="js/controllers/MidAgeController.js"></script>
+<script type="text/javascript" src="js/controllers/YoungAgeController.js"></script>
+<script type="text/javascript" src="js/services/DynamicFormService.js"></script>
+<script type="text/javascript" src="js/services/LoginService.js"></script>
 
 </body>
 </html>

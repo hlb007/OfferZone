@@ -1,7 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<body>
-	<div class="container">
+<header ng-include="login.views+'header.html'"></header>
+{{viewPath}}
+	<div class="">
 		<div class="top">
 			<h1 id="title" class="hidden"><span id="logo"><span></span></span></h1>
 		</div>
@@ -11,36 +10,14 @@
 			</div>
 			<label for="username">Username</label>
 			<br/>
-			<input type="text" id="username">
+			<input type="text" id="username" ng-model="login.username" ng-class="{'error':login.errorClass}">
 			<br/>
 			<label for="password">Password</label>
 			<br/>
-			<input type="password" id="password">
+			<input type="password" id="password" ng-model="login.pass" ng-class="{'error':login.errorClass}">
 			<br/>
-			<button type="submit">Sign In</button>
+			<button type="button" ng-click="login.sigIn()">Sign In</button>
 			<br/>
 			<a href="#"><p class="small">Forgot your password?</p></a>
 		</div>
 	</div>
-</body>
-
-<script>
-	$(document).ready(function () {
-    	$('#logo').addClass('animated fadeInDown');
-    	$("input:text:visible:first").focus();
-	});
-	$('#username').focus(function() {
-		$('label[for="username"]').addClass('selected');
-	});
-	$('#username').blur(function() {
-		$('label[for="username"]').removeClass('selected');
-	});
-	$('#password').focus(function() {
-		$('label[for="password"]').addClass('selected');
-	});
-	$('#password').blur(function() {
-		$('label[for="password"]').removeClass('selected');
-	});
-</script>
-
-</html>

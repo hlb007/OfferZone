@@ -49,8 +49,7 @@ h6 {
 }
 
 .intro2-header {
-    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-    padding-bottom: 50px;
+    margin-top: 50px;
     text-align: center;
     color: #f8f8f8;
     background: url(../img/pension2.jpg) no-repeat center center;
@@ -140,22 +139,24 @@ header .intro-text .intro-heading {
     font-weight: 400;
     letter-spacing: 2px;
 }
-
-.content-section-a {
-    padding: 50px 0;
-    background-color: #f8f8f8;
+.content-section {
+    border: 1px solid #626262;
+    margin-top: 24px;
+    border-radius: 6px;
+    background-color: rgb(47, 83, 138);
+    padding: 50px 24px;
+    color: white;
 }
-
-.content-section-b {
-    padding: 50px 0;
-    border-top: 1px solid #e7e7e7;
-    border-bottom: 1px solid #e7e7e7;
+.content-section:last-child{
+  margin-bottom: 50px;
 }
-
 .section-heading {
     margin-bottom: 30px;
 }
-
+.old-age-image-offers{
+  position: relative;
+  top: 60px;
+}
 .section-heading-spacer {
     float: left;
     width: 200px;

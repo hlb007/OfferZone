@@ -1,5 +1,4 @@
 body {
-	background: url("../img/intro-bg.jpg") no-repeat center center fixed;
 	background-size: cover;
 	font-size: 16px;
 	font-family: 'Lato', sans-serif;
@@ -7,7 +6,12 @@ body {
 	margin: 0;
 	color: #666;
 }
-
+.body-background-login{
+		background: url("worldMap.svg") no-repeat center center fixed;
+}
+.body-background{
+		background: rgba(93, 130, 173, 0.27);
+}
 /* Typography */
 h1#title {
 	font-family: 'Roboto Slab', serif;
@@ -52,9 +56,7 @@ p.small {
 
 
 /* Layout */
-.container {
-	margin: 0;
-}
+
 
 .top {
 	margin: 0;
@@ -79,7 +81,7 @@ p.small {
 }
 
 .login-box .box-header {
-	background-color: #000;
+	background-color: #621a4b;
 	margin-top: 0;
 	border-radius: 5px 5px 0 0;
 }
@@ -101,6 +103,10 @@ p.small {
 	font-size: .9em;
 	color: #888;
 }
+.error {
+	border: 1px solid red !important;
+	background-color: pink !important;
+}
 
 .login-box input:focus {
 	outline: none;
@@ -119,7 +125,7 @@ p.small {
 	font-weight: 400;
 	font-size: 0.7em;
 	letter-spacing: 1px;
-	background-color: #000;
+	background-color: #621a4b;
 	cursor:pointer;
 	outline: none;
 }

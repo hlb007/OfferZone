@@ -1,0 +1,66 @@
+<header ng-include="old.views +'header.html'"></header>
+<div ng-show="!vm.showFlag" ng-class="{'custom_background_sydney':vm.data.city_id==1,'custom_background_melbourne':vm.data.city_id==2}"><header ng-include="old.views +'header.html'"></header>
+<div ng-class="{'header_sydney':vm.data.city_id==1,'header_melbourne':vm.data.city_id==2}">
+<!-- <div class="intro2-header" ng-style:"{'background':'url({{vm.data.header.background_img}})'}"> -->
+    <div class="container no-margin">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="intro-message">
+                    <h1></h1>
+                    <h3></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<main class="container">
+  <div class="" ng-repeat="offer in vm.data.offers">
+    <div data-ng-click="openOffer(vm.data.city_id,offer.offer_id)" class="content-section" ng-if="offer.offer_id%2" ng-class="{'custom_offer_sydney':vm.data.city_id==1,'custom_offer_melbourne':vm.data.city_id==2}">
+        <div class="row">
+            <div class="col-lg-5 col-sm-6">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">{{offer.title}}</h2>
+                <p class="lead">{{offer.offer}}</p>
+            </div>
+            <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                <img class="img-responsive old-age-image-offers" ng-src="{{offer.img}}" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- /.content-sectiona -->
+
+    <div class="content-section" ng-if="!(offer.offer_id%2)" ng-class="{'custom_offer_sydney':vm.data.city_id==1,'custom_offer_melbourne':vm.data.city_id==2}">
+        <div class="row">
+            <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                <!-- <hr class="section-heading-spacer">-->
+                <div class="clearfix"></div>
+                <h2 class="section-heading">{{offer.title}}</h2>
+                <p class="lead">{{offer.offer}}</p>
+            </div>
+            <div class="col-lg-5 col-sm-pull-6 col-sm-6">
+                <img class="img-responsive old-age-image-offers" src="{{offer.img}}" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+	<a  name="contact"></a>
+    <div ng-class="{'banner':vm.data.city_id==1,'banner_melbourne':vm.data.city_id==2}">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2></h2>
+                </div>
+                <div class="col-lg-6">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.banner -->
+<div>
